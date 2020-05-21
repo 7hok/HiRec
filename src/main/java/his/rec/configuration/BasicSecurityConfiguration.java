@@ -33,11 +33,11 @@ public class BasicSecurityConfiguration extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(userDetailsService()).passwordEncoder(encoder());
     }
 
-    // @Override
-    // protected void configure(HttpSecurity http) throws Exception {
-    //     http // other configure params.
-    //             .csrf().disable();
-    // }
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http // other configure params.
+                .csrf().disable();
+    }
 
     @Override
     @Bean

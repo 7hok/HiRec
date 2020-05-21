@@ -8,9 +8,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.Data;
+import lombok.AllArgsConstructor;
 
 @Entity
 @Table(name="users")
+@AllArgsConstructor
 @Data
 public class User {
     @Id
@@ -20,6 +22,12 @@ public class User {
     private String username;
     private String password;
     private Integer status=1;
+    public User(){}
+    public User(String username,String password,Integer status){
+        this.username=username;
+        this.password=password;
+        this.status=status;
+    }
 
     public String getPassword() {
         return this.password;

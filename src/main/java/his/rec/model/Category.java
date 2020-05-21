@@ -28,6 +28,17 @@ public class Category {
     @JoinColumn
     private User user;
 
+    public Category() {
+    }
+    public Category(String image,String name,Integer status,Float price,Date createdAt,User user) {
+        this.image=image;
+        this.name=name;
+        this.status=status;
+        this.price=price;
+        this.createdAt=createdAt;
+        this.user=user;
+    }
+
     public User getUser() {
         return this.user;
     }
