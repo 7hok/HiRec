@@ -1,4 +1,4 @@
-package his.rec.configuration;
+package his.rec.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import antlr.RecognitionException;
 import his.rec.model.User;
 import his.rec.service.UserService;
 
@@ -20,7 +21,7 @@ public class AuthController {
     @Autowired UserService userService;
 
     @PostMapping("/register")
-    public ResponseEntity<User> register(@Validated @RequestBody final User user)  
+    public ResponseEntity<User> register(@Validated @RequestBody final User user)  throws RecognitionException
     {
         User create = userService.save(user);
         return new ResponseEntity<User>(create, new HttpHeaders(), HttpStatus.OK);
