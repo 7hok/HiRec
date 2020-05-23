@@ -1,19 +1,28 @@
 package his.rec.model;
 
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import org.hibernate.annotations.CreationTimestamp;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.ToString;
 
 @Entity
-@Data
 public class Category {
     @Id
     @GeneratedValue(strategy =GenerationType.IDENTITY)
@@ -21,34 +30,22 @@ public class Category {
     private Integer id;
     private String image;
     private String name;
-    private Integer status;
+    private Integer status=1;
     private Float price;
+    @CreationTimestamp
     private Date createdAt;
     @ManyToOne
     @JoinColumn
     private User user;
+    // @JsonManagedReference
+    // @OneToMany(fetch = FetchType.EAGER,mappedBy = "category")
+    // private List<Record> record;
 
     public Category() {
     }
-    public Category(String image,String name,Integer status,Float price,Date createdAt,User user) {
-        this.image=image;
-        this.name=name;
-        this.status=status;
-        this.price=price;
-        this.createdAt=createdAt;
-        this.user=user;
-    }
-
-    public User getUser() {
-        return this.user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 
     public Integer getId() {
-        return this.id;
+        return id;
     }
 
     public void setId(Integer id) {
@@ -56,7 +53,7 @@ public class Category {
     }
 
     public String getImage() {
-        return this.image;
+        return image;
     }
 
     public void setImage(String image) {
@@ -64,7 +61,7 @@ public class Category {
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public void setName(String name) {
@@ -72,7 +69,7 @@ public class Category {
     }
 
     public Integer getStatus() {
-        return this.status;
+        return status;
     }
 
     public void setStatus(Integer status) {
@@ -80,7 +77,7 @@ public class Category {
     }
 
     public Float getPrice() {
-        return this.price;
+        return price;
     }
 
     public void setPrice(Float price) {
@@ -88,12 +85,47 @@ public class Category {
     }
 
     public Date getCreatedAt() {
-        return this.createdAt;
+        return createdAt;
     }
 
     public void setCreatedAt(Date createdAt) {
         this.createdAt = createdAt;
     }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    // public List<Record> getRecord() {
+    //     return record;
+    // }
+
+    // public void setRecord(List<Record> record) {
+    //     this.record = record;
+    // }
+
+    @Override
+    public String toString() {
+        return "Category [createdAt=" + createdAt + ", id=" + id + ", image=" + image + ", name=" + name + ", price="
+                + price + ", record="  + ", status=" + status + ", user=" + user + "]";
+    }
+
+    public Category(Integer id, String image, String name, Integer status, Float price, Date createdAt, User user
+         ) {
+        this.id = id;
+        this.image = image;
+        this.name = name;
+        this.status = status;
+        this.price = price;
+        this.createdAt = createdAt;
+        this.user = user;
+        // this.record = record;
+    }
+   
 
     
 }

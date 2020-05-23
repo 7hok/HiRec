@@ -23,11 +23,12 @@ import his.rec.utils.GlobalFunction;
 public class RecordController {
     @Autowired
     private RecordService recordService;
-
     @GetMapping("")
-    public List<Record> findAll(){
-        return recordService.findAllRecord();
-    }
+    public Object findRecord(){
+         return new ResponseEntity<>(GlobalFunction.getResponseBody("Data get All successfully", recordService.findAllRecord()),HttpStatus.ACCEPTED);
+       
+        }
+
      @PostMapping("")
     public ResponseEntity<Map<String,Object>> saveCategory(@RequestBody Record record){
         return new ResponseEntity<>(GlobalFunction.getResponseBody("Data", recordService.insertRecord(record)),HttpStatus.ACCEPTED);

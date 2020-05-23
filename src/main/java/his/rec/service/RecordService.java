@@ -3,8 +3,10 @@ package his.rec.service;
 import java.util.List;
 import java.util.Optional;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import his.rec.model.Record;
 import his.rec.repository.RecordRepository;
@@ -18,6 +20,7 @@ public class RecordService {
         return recordRepository.save(record);
     }
 
+    @Transactional(readOnly = true)
     public List<Record> findAllRecord(){
         return recordRepository.findAll();
     }
