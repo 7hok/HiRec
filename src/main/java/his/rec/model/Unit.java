@@ -1,7 +1,6 @@
 package his.rec.model;
 
-import java.io.Serializable;
-import java.util.Date;
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -13,36 +12,22 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-// import com.fasterxml.jackson.annotation.JsonManagedReference;
 
-import org.hibernate.annotations.CreationTimestamp;
+
+
 @Entity
-public class Record implements Serializable {
-    /**
-     *
-     */
-    private static final long serialVersionUID = 1L;
+public class Unit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true)
     private Integer id;
-    private Integer status=1;
-    @CreationTimestamp
-    private Date created;
-    private Integer serviceAmount;
-    private Float totalPrice;
+    private Integer status;
+    private Float price;
+    private Date createdDate;
     @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY,optional = true)
     @JoinColumn(name="categoryId")
     private Category category;
-
-    public Integer getServiceAmount() {
-        return this.serviceAmount;
-    }
-
-    public void setServiceAmount(Integer serviceAmount) {
-        this.serviceAmount = serviceAmount;
-    }
 
     public Category getCategory() {
         return this.category;
@@ -68,20 +53,23 @@ public class Record implements Serializable {
         this.status = status;
     }
 
-    public Date getCreated() {
-        return this.created;
+    public Float getPrice() {
+        return this.price;
     }
 
-    public void setCreated(Date created) {
-        this.created = created;
+    public void setPrice(Float price) {
+        this.price = price;
     }
 
-    public Float getTotalPrice() {
-        return this.totalPrice;
+    public Date getCreatedDate() {
+        return this.createdDate;
     }
 
-    public void setTotalPrice(Float totalPrice) {
-        this.totalPrice = totalPrice;
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
     }
 
+   
+
+    
 }

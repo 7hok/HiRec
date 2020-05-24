@@ -37,9 +37,9 @@ public class Category {
     @ManyToOne
     @JoinColumn
     private User user;
-    // @JsonManagedReference
-    // @OneToMany(fetch = FetchType.EAGER,mappedBy = "category")
-    // private List<Record> record;
+    @JsonManagedReference
+    @OneToMany(fetch = FetchType.EAGER,mappedBy = "category")
+    private List<Record> record;
 
     public Category() {
     }
@@ -100,22 +100,22 @@ public class Category {
         this.user = user;
     }
 
-    // public List<Record> getRecord() {
-    //     return record;
-    // }
+    public List<Record> getRecord() {
+        return record;
+    }
 
-    // public void setRecord(List<Record> record) {
-    //     this.record = record;
-    // }
+    public void setRecord(List<Record> record) {
+        this.record = record;
+    }
 
     @Override
     public String toString() {
         return "Category [createdAt=" + createdAt + ", id=" + id + ", image=" + image + ", name=" + name + ", price="
-                + price + ", record="  + ", status=" + status + ", user=" + user + "]";
+                + price + ", record=" + record + ", status=" + status + ", user=" + user + "]";
     }
 
-    public Category(Integer id, String image, String name, Integer status, Float price, Date createdAt, User user
-         ) {
+    public Category(Integer id, String image, String name, Integer status, Float price, Date createdAt, User user,
+            List<Record> record) {
         this.id = id;
         this.image = image;
         this.name = name;
@@ -123,7 +123,7 @@ public class Category {
         this.price = price;
         this.createdAt = createdAt;
         this.user = user;
-        // this.record = record;
+        this.record = record;
     }
    
 

@@ -19,7 +19,7 @@ import his.rec.service.RecordService;
 import his.rec.utils.GlobalFunction;
 
 @RestController
-@RequestMapping("/record")
+@RequestMapping("/api/record")
 public class RecordController {
     @Autowired
     private RecordService recordService;
