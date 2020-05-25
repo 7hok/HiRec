@@ -15,7 +15,7 @@ import his.rec.model.User;
 import his.rec.service.UserService;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/v1/auth")
 public class AuthController {
     
     @Autowired UserService userService;

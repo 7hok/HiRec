@@ -3,9 +3,10 @@
     xmlns="http://www.w3.org/1999/xhtml" layout:decorator="~{layout}">
 
 <body>
-    <div class="content p-5  "  layout:fragment="content">
+    <div class="content "  layout:fragment="content">
+        <link rel="stylesheet" href="/css/argon.min.css">
         <div th:replace="~{fragment/left-side-bar}"></div>
-        <div class="container-fiuld">
+        <div class="container p-5">
             <div class="row">
                 <div class="col-xl-12">
                     <div class="card">

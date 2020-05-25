@@ -20,7 +20,7 @@ import his.rec.service.CategoryService;
 import his.rec.utils.GlobalFunction;
 
 @RestController
-@RequestMapping("/category")
+@RequestMapping("/api/category")
 public class CategoryController {
     @Autowired
     private CategoryService categoryService;
