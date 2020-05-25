@@ -1,0 +1,184 @@
+<style>
+    td, th {
+    vertical-align: middle !important;
+    }
+.left, .right {
+        float:left;
+        height:100vh;
+    }
+    
+.left {
+        background: #42639c;
+        display: inline-block;
+        white-space: nowrap;
+        width: 50px;
+        transition: width 1s ;
+    }
+
+.right {
+        background: #fff;
+        width: 350px;
+        transition: width 1s;
+        border-style:solid;
+        border-color:#ccc;
+        border-width:1px;
+    }    
+
+.left:hover {
+        width: 250px;
+    }    
+    
+.item:hover {
+        background-color:#a9a9a9;
+        color: #fff;
+        }
+        
+.left .glyphicon {
+        margin-top:.5rem;
+        margin-left:1rem;
+        color:#fff;
+        font-size: 28px; 
+        /* color: #606060; */
+    }
+    
+.right .glyphicon {
+        color:#a9a9a9;
+    }
+span.glyphicon.glyphicon-refresh{
+    font-size:17px;
+    vertical-align: middle !important;
+    }
+    
+.item {
+        height:60px;
+        overflow:hidden;
+        color:#fff;
+    }
+/* .title {
+        background-color:#eee;
+        border-style:solid;
+        border-color:#ccc;
+        border-width:1px;
+        box-sizing: border-box;
+    }
+.search:hover {
+        border-color:#4aa9fb;
+        border-width:1px;
+    }
+.search {
+    padding:3px 8px 3px !important;
+    }
+input[type=search] {
+    padding: 10px 0px 10px;
+	border: 0px solid #fff;
+	background: #eee;
+	-webkit-appearance: none;
+    width:90%;
+    float:none;
+}
+input[type=search]:focus {
+    outline:none;
+    }
+.type{
+    height: 47px;;
+    }
+.date{
+    background-color:#f7f7f7
+    }
+.docdate {
+    vertical-align:bottom !important;
+    }
+.distr {
+    margin: 0 0 5px;
+    font-size: 12px;
+    }
+.ndoc {
+    margin: 0 0 5px;
+    }
+.storage {
+    margin: 0;
+    color: #aaa !important;
+    font-size: 12px;
+    } */
+        
+    
+    
+</style>
+<div class="left border ">
+    <div class="item">
+        <!-- <i class="fas fa-bars glyphicon" style="font-size:20px"></i> -->
+        <i class="fab fa-java glyphicon" ></i>
+
+        <span class="text-white pl-3 text-center">
+            <i class="far fa-address-card mx-5"  style="font-size:23px"></i>
+            <i class="fab fa-android"  style="font-size:23px"></i>
+        </span>
+        <hr>
+    </div>
+    <div class="item " onclick="location.href = '/transac'">
+       
+        <i class="far fa-edit glyphicon"   style="font-size:19px" ></i>
+        <span class="text-white pl-3 text-center">Transaction</span>
+    </div>
+    <div class="item " onclick="location.href = '/history'">
+        <i class="fas fa-history glyphicon " style="font-size:20px"></i>
+        <span class="text-white pl-3">History</span>
+    </div>
+    <div class="item " onclick="location.href = '/report'">
+        <i class="far fa-clipboard glyphicon "  style="font-size:23px"></i>
+        <span class="text-white pl-3">Report</span>
+       </div> 
+    <div class="item " onclick="location.href = '/graph'">
+        <i class="far fa-chart-bar glyphicon " style="font-size:19px"></i>
+        <span class="text-white pl-3">Comparation</span>
+    </div>
+    <!-- <div class="item ">
+        <i class="fab fa-java glyphicon"></i>
+       <span class="text-danger pl-3"></span>
+    </div>     -->
+    </div>
+    <!-- <div class="right">
+        <table class="table">
+        <tr>
+        <td class="title search col-md-9">
+        <div class="inner-addon right-addon">
+        <input class="col-md-12" type="search" placeholder="Поиск">
+        <i class="fab fa-java"></i>
+            </div>
+        </td>
+        <th valign="middle" colspan="2" class="title text-center">
+        <span class="glyphicon glyphicon-refresh"></span>
+        </th>
+        </tr>
+        <tr>
+        <td colspan="2" class="type">Приходные накладные</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="date">Сегодня</td>
+      </tr>
+        <tr>
+        <td class="docs">
+        <p class="ndoc">Р-1725207</p>
+        <p class="distr">Катрен</p>
+        <p class="storage">Светофор</p>
+        </td>
+        <td class="docdate">Вт, 9:56</td>
+      </tr>
+      <tr>
+        <td class="docs">
+        <p class="ndoc">Рн-Ас00000506407</p>
+        <p class="distr">Сиа-Интернейшнл</p>
+        <p class="storage">Светофор</p>
+        </td>
+        <td class="docdate">Вт, 11:10</td>
+      </tr>
+      <tr>
+        <td class="docs">
+        <p class="ndoc">Т120МТ62/07756</p>
+        <p class="distr">Протек</p>
+        <p class="storage">Светофор</p>
+        </td>
+        <td class="docdate">Вт, 14:16</td>
+      </tr>
+    </table>
+    </div> -->

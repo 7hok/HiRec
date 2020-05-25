@@ -1,0 +1,222 @@
+<!-- -  Default Today and choose -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    xmlns="http://www.w3.org/1999/xhtml" layout:decorator="~{layout}">
+
+<body>
+    <div class="content"  layout:fragment="content">
+        <style>
+            body {
+                background-color: #edf0f5;
+                }
+       
+            .avatar {
+                font-size: 1rem;
+                display: inline-flex;
+                width: 48px;
+                height: 48px;
+                color: #fff;
+                border-radius: .375rem;
+                background-color: #adb5bd;
+                align-items: center;
+                justify-content: center;
+            }   
+             
+            .media-body {
+                flex: 1 1;
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 0%;
+            }
+        </style>
+        <div th:replace="~{fragment/left-side-bar}"></div>
+        <div class="container-fiuld">
+            <div class="row p-5  d-flex justify-content-end">
+                
+                <input type="date" class="form-control w-25">
+                <input type="date" class="form-control w-25">
+                <button class="btn btn-primary">Submit</button>
+            </div>
+            <div class="row px-5 rounded ">
+                <div class="card-header  bg-white border-0 w-100">
+                    <h3 class="mb-0">Light table</h3>
+                  </div>
+                <div class="table-responsive bg-white">
+                    <table class="table align-items-center table-flush  w-100">
+                        <thead class="thead-light bg-facebook ">
+                          <tr>
+                            <th scope="col" class="sort" data-sort="name">Category</th>
+                            <th scope="col" class="sort" data-sort="budget">Price</th>
+                            <th scope="col" class="sort" data-sort="status">Amount</th>
+                            <th scope="col">Category Total</th>
+                            <th scope="col" class="sort" data-sort="completion">Total</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                <div class="d-flex align-items-center">
+                                        <a href="#" class="avatar rounded-circle mr-3 ">
+                                        <img alt="Image placeholder"  style="width:30px"  src="https://cdn.dribbble.com/users/637758/screenshots/6968977/writer.png">
+                                        </a>
+                                        <div class="media-body">
+                                        <span class="name mb-0 text-sm">Argon Design System</span>
+                                    </div>
+                                </div>
+                                </th>
+                                <td class="text-sm">
+                                    <span>5.3</span>
+                                </td>
+                                <td class="text-sm">
+                                    <span>5</span>
+                                </td>
+                                <td class="text-sm">
+                                    <span>500</span>
+                                </td>
+                                <td class="text-sm">
+                                    <span>500</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="d-flex align-items-center">
+                                            <a href="#" class="avatar rounded-circle mr-3 ">
+                                            <img alt="Image placeholder" style="width:30px"  src="https://cdn.dribbble.com/users/637758/screenshots/6968977/writer.png">
+                                            </a>
+                                            <div class="media-body">
+                                            <span class="name mb-0 text-sm">Argon Design System</span>
+                                        </div>
+                                    </div>
+                                    </th>
+                                <td class="text-sm">
+                                    <span>5.3</span>
+                                </td>
+                                <td class="text-sm">
+                                    <span>3</span>
+                                </td>
+                                <td class="text-sm">
+                                    <span>500</span>
+                                </td>
+                                <td class="text-sm">
+                                    <span>1000</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="d-flex align-items-center">
+                                            <a href="#" class="avatar rounded-circle mr-3 ">
+                                            <img alt="Image placeholder" style="width:30px"  src="https://cdn.dribbble.com/users/637758/screenshots/6968977/writer.png">
+                                            </a>
+                                            <div class="media-body">
+                                            <span class="name mb-0 text-sm">Argon Design System</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <td class="text-sm">
+                                    <span>5.3</span>
+                                </td>
+                                <td class="text-sm">
+                                    <span>2</span>
+                                </td>
+                                <td class="text-sm">
+                                    <span>500</span>
+                                </td>
+                                <td class="text-sm">
+                                    <span>1500</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                <div class="d-flex align-items-center">
+                                        <a href="#" class="avatar rounded-circle mr-3 ">
+                                        <img alt="Image placeholder"  style="width:30px"  src="https://cdn.dribbble.com/users/637758/screenshots/6968977/writer.png">
+                                        </a>
+                                        <div class="media-body">
+                                        <span class="name mb-0 text-sm">Argon Design System</span>
+                                    </div>
+                                </div>
+                                </th>
+                                <td class="text-sm">
+                                    <span>5.3</span>
+                                </td>
+                                <td class="text-sm">
+                                    <span>1</span>
+                                </td>
+                                <td class="text-sm">
+                                    <span>500</span>
+                                </td>
+                                <td class="text-sm">
+                                    <span>2000</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="d-flex align-items-center">
+                                            <a href="#" class="avatar rounded-circle mr-3 ">
+                                            <img alt="Image placeholder" style="width:30px"  src="https://cdn.dribbble.com/users/637758/screenshots/6968977/writer.png">
+                                            </a>
+                                            <div class="media-body">
+                                            <span class="name mb-0 text-sm">Argon Design System</span>
+                                        </div>
+                                    </div>
+                                    </th>
+                                <td class="text-sm">
+                                    <span>5.3</span>
+                                </td>
+                                <td class="text-sm">
+                                    <span>1</span>
+                                </td>
+                                <td class="text-sm">
+                                    <span>500</span>
+                                </td>
+                                <td class="text-sm">
+                                    <span>3000</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div class="d-flex align-items-center">
+                                            <a href="#" class="avatar rounded-circle mr-3 ">
+                                            <img alt="Image placeholder" style="width:30px"  src="https://cdn.dribbble.com/users/637758/screenshots/6968977/writer.png">
+                                            </a>
+                                            <div class="media-body">
+                                            <span class="name mb-0 text-sm">Argon Design System</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <td class="text-sm">
+                                    <span>5.3</span>
+                                </td>
+                                <td class="text-sm">
+                                    <span>2</span>
+                                </td>
+                                <td class="text-sm">
+                                    <span>500</span>
+                                </td>
+                                <td class="text-sm">
+                                    <span>3500</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+              
+                <footer>
+                    <div class="w-100 bg-white"></div>
+                </footer>
+                
+                
+            </div>
+        </div>
+    </div>
+    <div  layout:fragment="content-js">
+      
+    </div>
+</body>
+</html>
